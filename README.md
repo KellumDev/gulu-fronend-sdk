@@ -37,12 +37,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 run the docker image locally
 
-$ PORT=8080 yarn start
+npm run dev
 
 If you want to run local docker machine, your running command should like below.
 
-$ docker run -e PORT=8080 -p 4000:8080 next-app
+docker build -t gulu-frontend .
+
+$ docker run -e PORT=3000-p 3000:3000 gulu-frontend
 
 ## Deploy to Google Cloud Run
 
-[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)

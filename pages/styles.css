@@ -270,12 +270,12 @@ pre {
 .button-pill:hover {
   color: rgba(255, 255, 255, 1) !important;
 }
-#nx-console:hover {
+/* #nx-console:hover {
   background-color: rgba(0, 122, 204, 1);
 }
 #nx-console svg {
   color: rgba(0, 122, 204, 1);
-}
+} *//* 
 #nx-repo:hover {
   background-color: rgba(24, 23, 23, 1);
 }
@@ -328,7 +328,7 @@ pre {
 }
 #nx-cloud a:hover {
   text-decoration: underline;
-}
+} */
 #commands {
   padding: 2.5rem 2rem;
   margin-top: 3.5rem;
