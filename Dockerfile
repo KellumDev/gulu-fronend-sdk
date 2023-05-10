@@ -1,18 +1,18 @@
 # base image
-FROM node:16.15.1-slim
+FROM node:alpine
 
-# Create and change to the app directory.
-WORKDIR /usr/app
+# create & set working directory
+RUN mkdir -p /usr/src
 
-# Copy application dependency manifests to the container image.
-# A wildcard is used to ensure copying both package.json AND package-lock.json (when available).
-# Copying this first prevents re-running npm install on every code change.
-COPY . .
+WORKDIR /usr/src
 
-# Install production dependencies.
-# If you add a package-lock.json, speed your build by switching to 'npm ci'.
-RUN npm ci --only=production
+# copy source files
+COPY . /usr/src
 
+# install dependencies
+RUN npm install
+
+# start app
 RUN npm run build
 
-CMD ["npm", "start"]
+CMD npm run start
