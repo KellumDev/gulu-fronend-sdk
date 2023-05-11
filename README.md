@@ -1,49 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Gulu 
+
+This is a mock interface of Hulu, and it is not currently in production. The project is entirely experimental, built with Next.js and Tailwind CSS. Information displayed to the user is sourced from the MovieDatabase.
+
+Checkout the running app here for a demonstations
 
 ## Getting Started
 
-First, run the development server:
+## Local Run Instructions 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Clone or fork the project and follow the instruction below to get started with running the app on your machine. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### To run locally without a docker container
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`npm run dev`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More
+### To run inside a docker container 
 
-To learn more about Next.js, take a look at the following resources:
+- first build the image 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`$ docker build -t gulu-frontend .`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Run the image 
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## Local Run 
-
-run the docker image locally
-
-npm run dev
-
-If you want to run local docker machine, your running command should like below.
-
-docker build -t gulu-frontend .
-
-$ docker run -e PORT=3000-p 3000:3000 gulu-frontend
-
-## Deploy to Google Cloud Run
-
+`$ docker run -e PORT=3000-p 3000:3000 gulu-frontend`
